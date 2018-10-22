@@ -19,8 +19,8 @@
           <table id="navbar" class="navbar-nav" cellspacing="60px">
             <tr style="height:1px;">
               <td><a href="/mod2_project/HomePage.html" class="nav-link">Home</a></td>
-              <td><a href="/mod2_project/EventInfo.html" class="nav-link">Event Information</a></td>
-              <td class="active"><a href="/mod2_project/AboutUs.html" class="nav-link">About Us</a></td>
+              <td class="active"><a href="/mod2_project/EventInfo.html" class="nav-link">Event Information</a></td>
+              <td><a href="/mod2_project/AboutUs.html" class="nav-link">About Us</a></td>
               <td><a href="/mod2_project/ContactUs.html" class="nav-link">Contact Us</a></td>
               <td>
                 <div class="wrap">
@@ -38,22 +38,66 @@
         </div>
       </center>
     </nav>
-    <p style="margin-left:35%; margin-right:35%; font-size:24px;">
-      <br/>Twitch is a rewarding streaming service for content creators all around the world! Build a community that loves doing what you love, too! <br/><br/>TwitchCon is our yearly convention to bring you the latest in tips and tricks while fans get to meet their favorite streamers and hang out!
+    <div class="GuestTable" style="font-size: 125%;">
+      <center>
+        <div class="GuestTable-container">
+          <?php
+            $servername="localhost:3306";
+
+            $username = "MPierce";
+            $password = "Fundwebappdevs1342";
+            $dbname = "demo";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if($conn->connect_error) {
+            	echo "Error:Unexpected connection error. Please retry.";
+            	echo mysqli_connect_error();
+            } else {
+                $result = $conn->query("SELECT * FROM twitchguests");
+	
+                if(($result != 0) && ($result->num_rows > 0)) {
+                  $row = $result->fetch_assoc();
+
+                  $Username = $row['Username'];
+                  $Site = $row['Site'];
+                  $MeetGreet = $row['MeetGreet'];
+                  $Sessions = $row['Sessions'];
+                  $ArtistAlley = $row['ArtistAlley'];
+                  $id = $row['id'];
+                
+                  while($row = mysqli_fetch_assoc($result)){
+                    echo '<a href="';
+                    echo $row['Site'];
+                    echo '">';
+                    echo $row['Username'];
+                    echo '</a>';
+                    echo '<br/>';
+                    echo '<br/>';
+                  }
+                }
+	$conn->close();
+}
+          ?>
+        </div>
+      </center>
+    </div>
+    <p style="margin-left: 45%; font-size:187.5%;">
+      And so many more!
     </p>
     <div id="socialpanel">
       <div class="social-container">
         <center>
-          <table id="socialbreak" width=99% style="position:absolute; bottom: 0px; border-top: 3px solid white;">
+          <table id="socialbreak" width=100% style="position:relative; bottom: -200px; border-top: 3px solid white;">
             <tr>
               <td style="padding-left:45%;">
-            <a id="Twitch" href="https://www.twitch.tv" style="text-decoration: none; font-size: 16px;">
+            <a id="Twitch" href="https://www.twitch.tv" style="text-decoration: none; font-size: 100%;">
               <img id="Twitch" src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="Twitch" width="30px"> Twitch&nbsp;&nbsp;
             </a>
-              <a id="Twitter" href="https://twitter.com/twitch" style="text-decoration: none; font-size: 16px;">
+              <a id="Twitter" href="https://twitter.com/twitch" style="text-decoration: none; font-size: 100%;">
               <img id="Twitter" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/738px-Twitter_bird_logo_2012.svg.png" alt="Twitter" width="30px"> Twitter&nbsp;&nbsp;
             </a>
-              <a id="Facebook" href="https://www.facebook.com/Twitch" style="text-decoration: none; font-size: 16px;">
+              <a id="Facebook" href="https://www.facebook.com/Twitch" style="text-decoration: none; font-size: 100%;">
               <img id="Facebook" src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Facebook-icon.png" alt="Facebook" width="30px">  Facebook
             </a></td>
             </tr>
@@ -62,8 +106,8 @@
       </div>
     </div>
     <div class="footer">
-      <p style="text-align:center;">
-        About Us
+      <p>
+        Special Guests
       </p>
     </div>
   </body>
@@ -84,7 +128,7 @@
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #000;
     clear: right;
-    font-size: 40px;
+    font-size: 250%;
     font-family: Georgia, serif;
     } /* Changes DIV 'WebsiteName' text width to .5px, color to #000, clears everything to its right, font size to 40px and font to Georgia Serif */
   .navbar {
@@ -92,7 +136,7 @@
     position: sticky;
     top: 0px;
     clear:both;
-    font-size: 24px;
+    font-size: 150%;
     width:100%;
     margin-left:0%;
     margin-right:0%;
@@ -113,7 +157,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#270f54', endColorstr='#270f54', GradientType=1 );
     }
   p {
-    font-size: 18px;
+    font-size: 112.5%;
     margin-left: 15%;
     margin-right: 15%;
     }
@@ -156,7 +200,7 @@
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 125%;
     }
   .wrap{
     position: relative;
