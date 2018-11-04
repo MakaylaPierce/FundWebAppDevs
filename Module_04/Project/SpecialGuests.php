@@ -7,10 +7,10 @@
   <body>
     <div class="header">
       <div class="logo">
-        <img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/>
+        <a href="/mod5_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
       </div>
       <div class="WebsiteName">
-        <h1>Twitchcon</h1>
+        <a href="/mod5_project/HomePage.html"><h1>Twitchcon</h1></a>
       </div>
     </div>
     <nav class="navbar">
@@ -18,10 +18,10 @@
         <div class="navbar-container">
           <table id="navbar" class="navbar-nav" cellspacing="60px">
             <tr style="height:1px;">
-              <td><a href="/mod4_project/HomePage.html" class="nav-link">Home</a></td>
-              <td class="active"><a href="/mod4_project/EventInfo.html" class="nav-link">Event Information</a></td>
-              <td><a href="/mod4_project/AboutUs.html" class="nav-link">About Us</a></td>
-              <td><a href="/mod4_project/ContactUs.html" class="nav-link">Contact Us</a></td>
+              <td><a href="/mod5_project/HomePage.html" class="nav-link">Home</a></td>
+              <td class="active"><a href="/mod5_project/EventInfo.html" class="nav-link">Event Information</a></td>
+              <td><a href="/mod5_project/AboutUs.html" class="nav-link">About Us</a></td>
+              <td><a href="/mod5_project/ContactUs.html" class="nav-link">Contact Us</a></td>
               <td>
                 <div class="wrap">
                   <div class="search">
@@ -38,12 +38,6 @@
         </div>
       </center>
     </nav>
-    <form style="margin-left:40%; font-size: 125%"> 
-      <label><input type="checkbox" name="chbx1" value="1" id=1 onclick="toggleCheckbox(this);">Meet and Greet&nbsp;&nbsp;&nbsp;</label>
-      <label><input type="checkbox" name="chbx2" value="2" id=2 onclick="toggleCheckbox(this);">Sessions&nbsp;&nbsp;&nbsp;</label>
-      <label><input type="checkbox" name="chbx3" value="3" id=3 onclick="toggleCheckbox(this);">Artist Alley&nbsp;&nbsp;&nbsp;</label>
-      <button type="submit" value="Search" id="submitbtn" style="height: 22px; width: 80px; border: 1px solid #252525; background: #252525; color: #fff !important; border-radius: 3px;">Search</button><br/><br/>
-    </form>
     <div class="GuestTable" style="font-size: 125%;">
       <center>
         <div class="GuestTable-container">
@@ -82,90 +76,11 @@
                       echo '<br/>';
                     }
                   }
-                /*} else {
-                    switch (id) {
-                      case 1:
-                        $result = $conn->query("SELECT * FROM twitchguests WHERE MeetGreet = 1");
-	
-                        if(($result != 0) && ($result->num_rows > 0)) {
-                          $row = $result->fetch_assoc();
-    
-                          $Username = $row['Username'];
-                          $Site = $row['Site'];
-                          $MeetGreet = $row['MeetGreet'];
-                          $Sessions = $row['Sessions'];
-                          $ArtistAlley = $row['ArtistAlley'];
-                          $id = $row['id'];
-                          
-                          while($row = mysqli_fetch_assoc($result)){
-                            echo '<a href="';
-                            echo $row['Site'];
-                            echo '">';
-                            echo $row['Username'];
-                            echo '</a>';
-                            echo '<br/>';
-                            echo '<br/>';
-                          }
-                        }
-                          break;
-                      case 2:
-                        $result = $conn->query("SELECT * FROM twitchguests WHERE Sessions = 1");
-	
-                        if(($result != 0) && ($result->num_rows > 0)) {
-                          $row = $result->fetch_assoc();
-
-                          $Username = $row['Username'];
-                          $Site = $row['Site'];
-                          $MeetGreet = $row['MeetGreet'];
-                          $Sessions = $row['Sessions'];
-                          $ArtistAlley = $row['ArtistAlley'];
-                          $id = $row['id'];
-                          
-                          while($row = mysqli_fetch_assoc($result)){
-                            echo '<a href="';
-                            echo $row['Site'];
-                            echo '">';
-                            echo $row['Username'];
-                            echo '</a>';
-                            echo '<br/>';
-                            echo '<br/>';
-                          }
-                        }
-                          break;
-                      case 3:
-                          $result = $conn->query("SELECT * FROM twitchguests WHERE ArtistAlley = 1");
-	
-                          if(($result != 0) && ($result->num_rows > 0)) {
-                            $row = $result->fetch_assoc();
-  
-                            $Username = $row['Username'];
-                            $Site = $row['Site'];
-                            $MeetGreet = $row['MeetGreet'];
-                            $Sessions = $row['Sessions'];
-                            $ArtistAlley = $row['ArtistAlley'];
-                            $id = $row['id'];
-                            
-                            while($row = mysqli_fetch_assoc($result)){
-                              echo '<a href="';
-                              echo $row['Site'];
-                              echo '">';
-                              echo $row['Username'];
-                              echo '</a>';
-                              echo '<br/>';
-                              echo '<br/>';
-                            }
-                          }
-                            break;
-                    }*/
                   $conn->close();
                 }
           ?>
         </div>
-      </center>
-    </div>
-    <p style="margin-left: 45%; font-size:187.5%;">
-      And so many more!
-    </p>
+    </center>
     <div id="socialpanel">
       <div class="social-container">
         <center>

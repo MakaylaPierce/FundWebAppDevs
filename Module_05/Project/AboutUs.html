@@ -3,13 +3,14 @@
   <head>
     <base href="fundwebappdevsvm.centralus.cloudapp.azure.com">
   </head>
+  
   <body>
     <div class="header">
       <div class="logo">
-        <a href="/mod5_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
+        <a href="/mod4_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
       </div>
       <div class="WebsiteName">
-        <a href="/mod5_project/HomePage.html"><h1>Twitchcon</h1></a>
+        <a href="/mod4_project/HomePage.html"><h1>Twitchcon</h1></a>
       </div>
     </div>
     <nav class="navbar">
@@ -17,10 +18,10 @@
         <div class="navbar-container">
           <table id="navbar" class="navbar-nav" cellspacing="60px">
             <tr style="height:1px;">
-              <td><a href="/mod5_project/HomePage.html" class="nav-link">Home</a></td>
-              <td class="active"><a href="/mod5_project/EventInfo.html" class="nav-link">Event Information</a></td>
-              <td><a href="/mod5_project/AboutUs.html" class="nav-link">About Us</a></td>
-              <td><a href="/mod5_project/ContactUs.html" class="nav-link">Contact Us</a></td>
+              <td><a href="/mod4_project/HomePage.html" class="nav-link">Home</a></td>
+              <td><a href="/mod4_project/EventInfo.html" class="nav-link">Event Information</a></td>
+              <td class="active"><a href="/mod4_project/AboutUs.html" class="nav-link">About Us</a></td>
+              <td><a href="/mod4_project/ContactUs.html" class="nav-link">Contact Us</a></td>
               <td>
                 <div class="wrap">
                   <div class="search">
@@ -37,23 +38,13 @@
         </div>
       </center>
     </nav>
-    <div class="EventChoices" style="margin-top:75px;">
-      <a id="ActivityLink" href="/mod5_project/Activities.html" <h1 style="font-size:36px; margin-left:30%;">Activities</h1></a>
-      <p id="EventChoicesActivity" style="margin-left:32%;">
-        Learn about what fun activities TwitchCon has in store for you!
-      </p>
-      <br/>
-      <br/>
-      <br/>
-      <a id="SpecialGuestLink" href="/mod5_project/SpecialGuests.php" <h1 style="font-size:36px; margin-left: 30%;">Special Guests</h1></a>
-      <p id="EventChoicesSpecialGuest" style="margin-left:32%;">
-        See what ther cool people are coming to TwitchCon 2018!
-      </p>
-    </div>
+    <p style="margin-left:35%; margin-right:35%; font-size:24px;">
+      <br/>Twitch is a rewarding streaming service for content creators all around the world! Build a community that loves doing what you love, too! <br/><br/>TwitchCon is our yearly convention to bring you the latest in tips and tricks while fans get to meet their favorite streamers and hang out!
+    </p>
     <div id="socialpanel">
       <div class="social-container">
         <center>
-          <table id="socialbreak" width=99% style="position:absolute; bottom: 0px; border-top: 3px solid white;">
+          <table id="socialbreak" width=100% style="position:relative; bottom: -200px; border-top: 3px solid white;">
             <tr>
               <td style="padding-left:45%;">
             <a id="Twitch" href="https://www.twitch.tv" style="text-decoration: none; font-size: 16px;">
@@ -71,8 +62,8 @@
       </div>
     </div>
     <div class="footer">
-      <p>
-        Event Information
+      <p style="text-align:center;">
+        About Us
       </p>
     </div>
   </body>
@@ -105,6 +96,7 @@
     width:100%;
     margin-left:0%;
     margin-right:0%;
+    z-index: 1;
     }
   a.nav-link {
     text-decoration: none;
@@ -129,7 +121,6 @@
     position:fixed;
     bottom:30px;
     right: 30px;
-    text-align: center;
     }
   input[type=text] {
   	color: black;

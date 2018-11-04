@@ -3,13 +3,14 @@
   <head>
     <base href="fundwebappdevsvm.centralus.cloudapp.azure.com">
   </head>
+  
   <body>
     <div class="header">
       <div class="logo">
-        <a href="/mod5_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
+        <a href="/mod4_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
       </div>
       <div class="WebsiteName">
-        <a href="/mod5_project/HomePage.html"><h1>Twitchcon</h1></a>
+        <a href="/mod4_project/HomePage.html"><h1>Twitchcon</h1></a>
       </div>
     </div>
     <nav class="navbar">
@@ -17,10 +18,10 @@
         <div class="navbar-container">
           <table id="navbar" class="navbar-nav" cellspacing="60px">
             <tr style="height:1px;">
-              <td><a href="/mod5_project/HomePage.html" class="nav-link">Home</a></td>
-              <td class="active"><a href="/mod5_project/EventInfo.html" class="nav-link">Event Information</a></td>
-              <td><a href="/mod5_project/AboutUs.html" class="nav-link">About Us</a></td>
-              <td><a href="/mod5_project/ContactUs.html" class="nav-link">Contact Us</a></td>
+              <td><a href="/mod4_project/HomePage.html" class="nav-link">Home</a></td>
+              <td class="active"><a href="/mod4_project/EventInfo.html" class="nav-link">Event Information</a></td>
+              <td><a href="/mod4_project/AboutUs.html" class="nav-link">About Us</a></td>
+              <td><a href="/mod4_project/ContactUs.html" class="nav-link">Contact Us</a></td>
               <td>
                 <div class="wrap">
                   <div class="search">
@@ -37,23 +38,53 @@
         </div>
       </center>
     </nav>
-    <div class="EventChoices" style="margin-top:75px;">
-      <a id="ActivityLink" href="/mod5_project/Activities.html" <h1 style="font-size:36px; margin-left:30%;">Activities</h1></a>
-      <p id="EventChoicesActivity" style="margin-left:32%;">
-        Learn about what fun activities TwitchCon has in store for you!
-      </p>
-      <br/>
-      <br/>
-      <br/>
-      <a id="SpecialGuestLink" href="/mod5_project/SpecialGuests.php" <h1 style="font-size:36px; margin-left: 30%;">Special Guests</h1></a>
-      <p id="EventChoicesSpecialGuest" style="margin-left:32%;">
-        See what ther cool people are coming to TwitchCon 2018!
-      </p>
-    </div>
+    <div class="GuestTable" style="font-size: 125%;">
+      <center>
+        <div class="GuestTable-container">
+          <?php
+            $servername="localhost:3306";
+
+            $username = "MPierce";
+            $password = "Fundwebappdevs1342";
+            $dbname = "demo";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if($conn->connect_error) {
+            	echo "Error:Unexpected connection error. Please retry.";
+            	echo mysqli_connect_error();
+            } else {
+                /*if(empty($_POST['chbx'])) {*/
+                  $result = $conn->query("SELECT * FROM twitchguests");
+	
+                  if(($result != 0) && ($result->num_rows > 0)) {
+                    $row = $result->fetch_assoc();
+  
+                    $Username = $row['Username'];
+                    $Site = $row['Site'];
+                    $MeetGreet = $row['MeetGreet'];
+                    $Sessions = $row['Sessions'];
+                    $ArtistAlley = $row['ArtistAlley'];
+                    $id = $row['id'];
+                    while($row = mysqli_fetch_assoc($result)){
+                      echo '<a href="http://';
+                      echo $row['Site'];
+                      echo '">';
+                      echo $row['Username'];
+                      echo '</a>';
+                      echo '<br/>';
+                      echo '<br/>';
+                    }
+                  }
+                  $conn->close();
+                }
+          ?>
+        </div>
+    </center>
     <div id="socialpanel">
       <div class="social-container">
         <center>
-          <table id="socialbreak" width=99% style="position:absolute; bottom: 0px; border-top: 3px solid white;">
+          <table id="socialbreak" width=100% style="position:relative; bottom: -200px; border-top: 3px solid white;">
             <tr>
               <td style="padding-left:45%;">
             <a id="Twitch" href="https://www.twitch.tv" style="text-decoration: none; font-size: 16px;">
@@ -72,7 +103,7 @@
     </div>
     <div class="footer">
       <p>
-        Event Information
+        Special Guests
       </p>
     </div>
   </body>
@@ -93,7 +124,7 @@
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #000;
     clear: right;
-    font-size: 40px;
+    font-size: 250%;
     font-family: Georgia, serif;
     } /* Changes DIV 'WebsiteName' text width to .5px, color to #000, clears everything to its right, font size to 40px and font to Georgia Serif */
   .navbar {
@@ -101,10 +132,11 @@
     position: sticky;
     top: 0px;
     clear:both;
-    font-size: 24px;
+    font-size: 150%;
     width:100%;
     margin-left:0%;
     margin-right:0%;
+    z-index: 1;
     }
   a.nav-link {
     text-decoration: none;
@@ -121,7 +153,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#270f54', endColorstr='#270f54', GradientType=1 );
     }
   p {
-    font-size: 18px;
+    font-size: 112.5%;
     margin-left: 15%;
     margin-right: 15%;
     }
@@ -129,7 +161,6 @@
     position:fixed;
     bottom:30px;
     right: 30px;
-    text-align: center;
     }
   input[type=text] {
   	color: black;
@@ -165,7 +196,7 @@
     color: #fff;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 125%;
     }
   .wrap{
     position: relative;
