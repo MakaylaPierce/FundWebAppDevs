@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="fundwebappdevsvm.centralus.cloudapp.azure.com">
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="/mod4_project/HomePage.html"><img src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="twitch logo png" width="100px"/></a>
+      </div>
+      <div class="WebsiteName">
+        <a href="/mod4_project/HomePage.html"><h1>Twitchcon</h1></a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <center>
+        <div class="navbar-container">
+          <table id="navbar" class="navbar-nav" cellspacing="60px">
+            <tr style="height:1px;">
+              <td class="active"><a href="/mod4_project/HomePage.html" class="nav-link">Home</a></td>
+              <td><a href="/mod4_project/EventInfo.html" class="nav-link">Event Information</a></td>
+              <td><a href="/mod4_project/AboutUs.html" class="nav-link">About Us</a></td>
+              <td><a href="/mod4_project/ContactUs.html" class="nav-link">Contact Us</a></td>
+              <td>
+                <div class="wrap">
+                  <div class="search">
+      	  					<input type="text" class="searchTerm" placeholder="Search">
+        						<button type="submit" class="searchButton">
+                      <img src="https://www.oswego.edu/oswego-search/img/search.png" class="searchicon" style="height:20px; width: 20px;">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    </nav>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="/mod2_project/Untitled.jpg" style="width:100%">
+      </div><!--/mod2_project/Untitled.jpg-->
+      <div class="mySlides fade">
+        <img src="/mod2_project/Untitled1.jpg" style="width:100%">
+      </div><!--/mod2_project/Untitled1.jpg-->
+      <div class="mySlides fade">
+        <img src="/mod2_project/Untitled2.jpg" style="width:100%">
+      </div><!--/mod2_project/Untitled2.jpg-->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <!--
+    "http://o.aolcdn.com/hss/storage/midas/1954603db2cc8c9723a58d6c6e84153a/202777799/twitchconmoscone1200.jpg"
+    "https://gaming.radeon.com/wp-content/uploads/sites/7/2017/10/IMG_2582-1246x700.jpg"
+    "https://pbs.twimg.com/media/CPw-GL0VEAQ5F99.jpg" 
+    Images for image carousel-->
+    <br/>
+    <h1 style="margin-left:30%;">
+      Announcements
+    </h1>
+    <br/>
+    <h3 style="margin-left: 32%;">
+      Tickets on sale now!
+    </h3>
+    <p style="padding-bottom: 15%; margin-left: 33%;">
+      &emsp;Get your TwitchCon 2018 tickets today!
+    </p>
+    <div id="socialpanel">
+      <div class="social-container">
+        <center>
+          <table id="socialbreak" width=100% style="position:relative; bottom: -200px; border-top: 3px solid white;">
+            <tr>
+              <td style="padding-left:45%;">
+            <a id="Twitch" href="https://www.twitch.tv" style="text-decoration: none; font-size: 16px;">
+              <img id="Twitch" src="https://www.freepnglogos.com/uploads/twitch-logo-png-6.png" alt="Twitch" width="30px"> Twitch&nbsp;&nbsp;
+            </a>
+              <a id="Twitter" href="https://twitter.com/twitch" style="text-decoration: none; font-size: 16px;">
+              <img id="Twitter" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/738px-Twitter_bird_logo_2012.svg.png" alt="Twitter" width="30px"> Twitter&nbsp;&nbsp;
+            </a>
+              <a id="Facebook" href="https://www.facebook.com/Twitch" style="text-decoration: none; font-size: 16px;">
+              <img id="Facebook" src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Facebook-icon.png" alt="Facebook" width="30px">  Facebook
+            </a></td>
+            </tr>
+          </table>
+        </center>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Home
+      </p>
+    </div>
+  </body>  
+  <style>
+  * {
+    color: white;
+    } /* Changes all text color to white */
+  .header {
+    top: 30px;
+    z-index: 2;
+    margin-left: 3%;
+    } /* Changes DIV 'header' margin on the left by 3% */
+  .logo {
+    float: left;
+    clear: left;
+    } /* Changes DIV 'logo' to float left and clear everything to its left */
+  .WebsiteName {
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #000;
+    clear: right;
+    font-size: 40px;
+    font-family: Georgia, serif;
+    } /* Changes DIV 'WebsiteName' text width to .5px, color to #000, clears everything to its right, font size to 40px and font to Georgia Serif */
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    clear:both;
+    font-size: 24px;
+    width:100%;
+    margin-left:0%;
+    margin-right:0%;
+    z-index: 1;
+    }
+  a.nav-link {
+    text-decoration: none;
+    align: center;
+    }
+  body, nav{
+    background: #270f54;
+    background: -moz-linear-gradient(left, #270f54 0%, #270f54 5%, #6441a5 30%, #6441a5 70%, #270f54 95%, #270f54 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #270f54), color-stop(5%, #270f54), color-stop(30%, #6441a5), color-stop(70%, #6441a5), color-stop(95%, #270f54), color-stop(100%, #270f54));
+    background: -webkit-linear-gradient(left, #270f54 0%, #270f54 5%, #6441a5 30%, #6441a5 70%, #270f54 95%, #270f54 100%);
+    background: -o-linear-gradient(left, #270f54 0%, #270f54 5%, #6441a5 30%, #6441a5 70%, #270f54 95%, #270f54 100%);
+    background: -ms-linear-gradient(left, #270f54 0%, #270f54 5%, #6441a5 30%, #6441a5 70%, #270f54 95%, #270f54 100%);
+    background: linear-gradient(to right, #270f54 0%, #270f54 5%, #6441a5 30%, #6441a5 70%, #270f54 95%, #270f54 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#270f54', endColorstr='#270f54', GradientType=1 );
+    }
+  p {
+    font-size: 18px;
+    margin-left: 15%;
+    margin-right: 15%;
+    }
+  .footer {
+    position:fixed;
+    bottom:30px;
+    right: 30px;
+    }
+  input[type=text] {
+  	color: black;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  .mySlides {
+    display: none;
+    }
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    } /* Slideshow container */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    } /* Next & previous buttons */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    } /* Position the "next button" to the right */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    } /* On hover, add a black background color with a little bit see-through */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    } /* The dots/bullets/indicators */
+  .dot.active, .dot:hover {
+    background-color: #717171;
+    } /* On hover, add a dark grey background color */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    } /* Fading animation */
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+    }
+  .search {
+    width: 100%;
+    position: relative
+    } /* Search Bar */
+  .searchTerm {
+    float: left;
+    width: 100%;
+    border: 3px solid #252525;
+    padding: 5px;
+    height: 20px;
+    border-radius: 3px;
+    outline: none;
+    color: #9DBFAF;
+    }
+  .searchTerm:focus{
+    color: #000;
+    }
+  .searchButton {
+    position: absolute;
+    right: -30px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #252525;
+    background: #252525;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    }
+  .wrap{
+    position: relative;
+    }
+  </style>
+  <script>
+  // Image Carousel
+  var slideIndex = 0;
+  carousel();
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  function showSlides() {
+    var n = slideIndex;
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1
+      } 
+    if (n < 1) {
+      slideIndex = slides.length
+      }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+    }
+  function carousel() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(carousel, 5000);
+    }
+  </script>
+</html>
